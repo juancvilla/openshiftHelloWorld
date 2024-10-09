@@ -14,3 +14,10 @@ oc describe deployments hello-world
 oc get replicasets
 
 oc describe replicasets
+
+oc expose deployment hello-world --name=mi-servicio
+
+oc get services mi-servicio
+
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+my-service   ClusterIP   172.30.121.34   <none>        8080/TCP   27m
