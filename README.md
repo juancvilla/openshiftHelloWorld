@@ -19,5 +19,20 @@ oc expose deployment hello-world --name=mi-servicio
 
 oc get services mi-servicio
 
-NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
-my-service   ClusterIP   172.30.121.34   <none>        8080/TCP   27m
+oc describe services mi-servicio
+
+oc get pods --output=wide
+
+oc expose svc mi-servicio
+
+# Limpiando
+
+Para eliminar el Servicio, introduzca estos comandos:
+
+oc delete route mi-servicio
+
+oc delete service mi-servicio
+
+oc delete -f https://github.com/juancvilla/openshiftHelloWorld/hw-example.yaml
+
+
