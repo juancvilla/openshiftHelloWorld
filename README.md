@@ -25,7 +25,7 @@ oc get pods --output=wide
 
 oc expose svc mi-servicio
 
-# Limpiando
+# Limpiando openshiftHelloWorld
 
 Para eliminar el Servicio, introduzca estos comandos:
 
@@ -35,4 +35,10 @@ oc delete service mi-servicio
 
 oc delete -f https://raw.githubusercontent.com/juancvilla/openshiftHelloWorld/refs/heads/main/hw-example.yaml
 
+# Openshift nginx example
 
+oc apply  -f https://raw.githubusercontent.com/juancvilla/openshiftHelloWorld/refs/heads/main/nginx.yaml
+
+# Limpiando nginx example
+
+oc delete -f https://raw.githubusercontent.com/juancvilla/openshiftHelloWorld/refs/heads/main/nginx.yaml
